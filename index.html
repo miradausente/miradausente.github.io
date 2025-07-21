@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Malla Terapia Ocupacional</title>
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background-color: #fff0f5;
+      color: #333;
+      padding: 2rem;
+    }
+    h1 {
+      text-align: center;
+      color: #d63384;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(10, minmax(120px, 1fr));
+      gap: 0.5rem;
+      overflow-x: auto;
+    }
+    .semestre {
+      background-color: #ffe6f0;
+      border-radius: 1rem;
+      padding: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .semestre h2 {
+      font-size: 1rem;
+      text-align: center;
+      color: #b3005e;
+      margin-bottom: 0.5rem;
+    }
+    .ramo {
+      background-color: #ffd6ec;
+      padding: 0.5rem;
+      border-radius: 1rem;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .ramo.aprobado {
+      background-color: #c3f7c0;
+      text-decoration: line-through;
+    }
+    .ramo:hover {
+      background-color: #ffb3da;
+    }
+  </style>
+</head>
+<body>
+  <h1>Malla Terapia Ocupacional</h1>
+  <div class="grid">
+    <!-- Semestres -->
+    <div class="semestre">
+      <h2>Semestre I</h2>
+      <div class="ramo">Introducción a la Terapia Ocupacional</div>
+      <div class="ramo">Salud Colectiva</div>
+      <div class="ramo">Derechos Humanos</div>
+      <div class="ramo">Sociedad, Cultura y Ocupación</div>
+      <div class="ramo">Habilidades Comunicativas</div>
+      <div class="ramo">Rehabilitación e Inclusión</div>
+      <div class="ramo">Inglés I</div>
+    </div>
+    <div class="semestre">
+      <h2>Semestre II</h2>
+      <div class="ramo">Perspectivas Teóricas en Terapia Ocupacional</div>
+      <div class="ramo">Anatomía General y Neuroanatomía</div>
+      <div class="ramo">Neurobiología</div>
+      <div class="ramo">Epistemología de las Ciencias</div>
+      <div class="ramo">Inglés II</div>
+    </div>
+    <!-- Agrega los demás semestres aquí como los anteriores -->
+  </div>
+
+  <script>
+    document.querySelectorAll('.ramo').forEach(ramo => {
+      ramo.addEventListener('click', () => {
+        ramo.classList.toggle('aprobado');
+      });
+    });
+  </script>
+</body>
+</html>
