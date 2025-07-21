@@ -8,13 +8,21 @@
   <style>
     body {
       font-family: 'Nunito', sans-serif;
+      background: url('https://i.imgur.com/3VesrF8.png'); /* fondo de gatitos suave */
       background-color: #fff0f5;
+      background-repeat: repeat;
+      background-size: 200px;
       color: #333;
       padding: 2rem;
     }
     h1 {
       text-align: center;
       color: #d63384;
+    }
+    h1::after {
+      content: ' ♡';
+      color: #ff69b4;
+      font-weight: normal;
     }
     .grid {
       display: grid;
@@ -23,7 +31,7 @@
       overflow-x: auto;
     }
     .semestre {
-      background-color: #ffe6f0;
+      background-color: #ffe6f0ee;
       border-radius: 1rem;
       padding: 1rem;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
